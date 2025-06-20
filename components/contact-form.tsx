@@ -56,7 +56,7 @@ export function ContactForm() {
     console.log("Starting email send process...")
 
     const API_BASE_URL =
-      "https://script.google.com/macros/s/AKfycbwE8BSAXZBSwjIn92wZ58OrCQuXhjAF7vDIElHTxf5EdCPhhDmJSvCFaq9xEFRMZbShBA/exec"
+      "https://script.google.com/macros/s/AKfycbxZTa6Sfw9dj-yBb7UrlZK12rlHiCvLPa8uU9Zobz7lnXkIieNeh3thsfNuUlbB8hObiQ/exec"
 
     try {
       const emailBodyString = `First Name: ${firstName}\nLast Name: ${lastName}\nMessage: ${message}`
