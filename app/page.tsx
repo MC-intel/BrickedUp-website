@@ -265,8 +265,21 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-            <p className="text-gray-400">© 2025 BrickedUp Masonry. All Rights Reserved.</p>
+          <div className="mt-8 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-center md:text-left mb-4 md:mb-0">
+              © 2025 BrickedUp Masonry. All Rights Reserved.
+            </p>
+            <div className="flex space-x-4">
+              <Link href="#facebook" className="text-gray-400 hover:text-white transition duration-300">
+                Facebook
+              </Link>
+              <Link href="#instagram" className="text-gray-400 hover:text-white transition duration-300">
+                Instagram
+              </Link>
+              <Link href="#threads" className="text-gray-400 hover:text-white transition duration-300">
+                Threads
+              </Link>
+            </div>
           </div>
         </div>
       </footer>
