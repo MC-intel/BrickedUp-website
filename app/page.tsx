@@ -147,6 +147,15 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Quick Message Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-md mx-auto">
+              <ContactForm />
+            </div>
+          </div>
+        </section>
+
         {/* Services Section */}
         <section id="services" className="py-20 bg-white">
           <div className="container mx-auto px-6">
@@ -217,15 +226,6 @@ export default function HomePage() {
                   <p className="font-semibold text-amber-700 text-right">- {testimonial.author}</p>
                 </Card>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Quick Message Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-6">
-            <div className="max-w-md mx-auto">
-              <ContactForm />
             </div>
           </div>
         </section>
