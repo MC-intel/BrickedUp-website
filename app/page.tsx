@@ -109,30 +109,7 @@ export default function HomePage() {
             </h1>
           </div>
           <div className="hidden md:flex space-x-6">
-            <Link
-              href="/services"
-              className="text-gray-600 hover:text-gray-900 transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 rounded-sm"
-            >
-              Services
-            </Link>
-            <Link
-              href="/portfolio"
-              className="text-gray-600 hover:text-gray-900 transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 rounded-sm"
-            >
-              Portfolio
-            </Link>
-            <Link
-              href="/contact#portal"
-              className="text-gray-600 hover:text-gray-900 transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 rounded-sm"
-            >
-              Job Request
-            </Link>
-            <Link
-              href="/contact"
-              className="text-gray-600 hover:text-gray-900 transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 rounded-sm"
-            >
-              Contact
-            </Link>
+            {/* Links removed as per request */}
           </div>
           <MobileMenu />
         </nav>
