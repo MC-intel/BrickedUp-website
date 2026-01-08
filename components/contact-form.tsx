@@ -91,7 +91,8 @@ export function ContactForm() {
       }
     } catch (error) {
       console.error("Fetch Error:", error)
-      showMessage(`Network error or server issue: ${error.message}. Please try again.`, "error")
+      const errorMessage = error instanceof Error ? error.message : "Unknown error"
+      showMessage(`Network error or server issue: ${errorMessage}. Please try again.`, "error")
     } finally {
       setIsSubmitting(false)
       console.log("Email send process completed")
