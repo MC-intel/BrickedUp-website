@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
+import { CheckCircle, Phone, Mail } from "lucide-react"
 
 export function JobRequestForm() {
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -35,33 +36,46 @@ export function JobRequestForm() {
 
   if (isSubmitted) {
     return (
-      <div className="max-w-4xl mx-auto mt-8 p-6 bg-green-100 border border-green-400 text-green-700 rounded-lg text-center">
-        <h4 className="font-bold text-xl mb-2">Thank You for Your Interest!</h4>
-        <p className="mb-1">This form is for demonstration purposes only and does not actively submit your request.</p>
-        <p className="mb-3">To request a quote, please contact us directly:</p>
-        <p className="mb-1">
-          <a href="mailto:contact@elitemasonrydemo.com" className="text-amber-600 hover:text-amber-700 font-semibold">
-            Email: contact@elitemasonrydemo.com
-          </a>
-        </p>
-        <p>
-          <a href="tel:5551234567" className="text-amber-600 hover:text-amber-700 font-semibold">
-            Call: (555) 123-4567
-          </a>
-        </p>
+      <div className="max-w-4xl mx-auto">
+        <Card className="bg-gradient-to-br from-green-50 to-white border-2 border-green-200 shadow-lg">
+          <CardContent className="p-8 text-center">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <CheckCircle className="h-8 w-8 text-green-600" />
+            </div>
+            <h4 className="font-bold text-2xl mb-3 text-charcoal">Thank You for Your Interest!</h4>
+            <p className="text-steel mb-2">This form is for demonstration purposes only.</p>
+            <p className="text-steel mb-6">To request a quote, please contact us directly:</p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <a
+                href="mailto:contact@elitemasonrydemo.com"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-brick hover:bg-brick-light text-white font-semibold rounded-lg transition-colors duration-300"
+              >
+                <Mail className="h-5 w-5" />
+                Email Us
+              </a>
+              <a
+                href="tel:5551234567"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-orange hover:bg-orange-light text-white font-semibold rounded-lg transition-colors duration-300"
+              >
+                <Phone className="h-5 w-5" />
+                Call (555) 123-4567
+              </a>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     )
   }
 
   return (
     <div className="max-w-4xl mx-auto">
-      <Card className="bg-gray-50 shadow-md">
+      <Card className="bg-white shadow-lg border-2 border-gray-100">
         <CardContent className="p-8">
           <form onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* First Name */}
               <div>
-                <Label htmlFor="firstName" className="text-gray-700 font-semibold">
+                <Label htmlFor="firstName" className="text-charcoal font-semibold">
                   First Name
                 </Label>
                 <Input
@@ -70,14 +84,14 @@ export function JobRequestForm() {
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleInputChange}
-                  className="mt-1"
+                  className="mt-1.5 border-2 border-gray-200 focus:border-brick focus:ring-brick/20 transition-colors"
                   required
                 />
               </div>
 
               {/* Last Name */}
               <div>
-                <Label htmlFor="lastName" className="text-gray-700 font-semibold">
+                <Label htmlFor="lastName" className="text-charcoal font-semibold">
                   Last Name
                 </Label>
                 <Input
@@ -86,14 +100,14 @@ export function JobRequestForm() {
                   name="lastName"
                   value={formData.lastName}
                   onChange={handleInputChange}
-                  className="mt-1"
+                  className="mt-1.5 border-2 border-gray-200 focus:border-brick focus:ring-brick/20 transition-colors"
                   required
                 />
               </div>
 
               {/* Email */}
               <div>
-                <Label htmlFor="email" className="text-gray-700 font-semibold">
+                <Label htmlFor="email" className="text-charcoal font-semibold">
                   Email
                 </Label>
                 <Input
@@ -102,14 +116,14 @@ export function JobRequestForm() {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="mt-1"
+                  className="mt-1.5 border-2 border-gray-200 focus:border-brick focus:ring-brick/20 transition-colors"
                   required
                 />
               </div>
 
               {/* Phone */}
               <div>
-                <Label htmlFor="phone" className="text-gray-700 font-semibold">
+                <Label htmlFor="phone" className="text-charcoal font-semibold">
                   Phone
                 </Label>
                 <Input
@@ -118,13 +132,13 @@ export function JobRequestForm() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className="mt-1"
+                  className="mt-1.5 border-2 border-gray-200 focus:border-brick focus:ring-brick/20 transition-colors"
                 />
               </div>
 
               {/* Address */}
               <div className="md:col-span-2">
-                <Label htmlFor="address" className="text-gray-700 font-semibold">
+                <Label htmlFor="address" className="text-charcoal font-semibold">
                   Project Address
                 </Label>
                 <Input
@@ -133,14 +147,14 @@ export function JobRequestForm() {
                   name="address"
                   value={formData.address}
                   onChange={handleInputChange}
-                  className="mt-1"
+                  className="mt-1.5 border-2 border-gray-200 focus:border-brick focus:ring-brick/20 transition-colors"
                   required
                 />
               </div>
 
               {/* Job Description */}
               <div className="md:col-span-2">
-                <Label htmlFor="description" className="text-gray-700 font-semibold">
+                <Label htmlFor="description" className="text-charcoal font-semibold">
                   Job Description
                 </Label>
                 <Textarea
@@ -149,7 +163,7 @@ export function JobRequestForm() {
                   value={formData.description}
                   onChange={handleInputChange}
                   rows={6}
-                  className="mt-1"
+                  className="mt-1.5 border-2 border-gray-200 focus:border-brick focus:ring-brick/20 transition-colors"
                   placeholder="Describe the work you need done. For example: 'I need to repair a crumbling section of my brick chimney.' or 'I would like a quote for a new 12x15 foot paver patio.'"
                   required
                 />
@@ -159,7 +173,7 @@ export function JobRequestForm() {
             <div className="text-center mt-8">
               <Button
                 type="submit"
-                className="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-12 rounded-lg transition duration-300"
+                className="bg-brick hover:bg-brick-light text-white font-bold py-3 px-12 rounded-lg transition-all duration-300 hover:scale-[1.02] shadow-lg"
               >
                 Submit Request
               </Button>

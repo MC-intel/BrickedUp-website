@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
+import { Send } from "lucide-react"
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -98,26 +99,26 @@ export function ContactForm() {
   }
 
   const getMessageClasses = () => {
-    const baseClasses = "mt-6 p-4 rounded-lg text-center"
+    const baseClasses = "mt-6 p-4 rounded-lg text-center font-medium"
     switch (messageType) {
       case "success":
-        return `${baseClasses} bg-green-100 text-green-700`
+        return `${baseClasses} bg-green-50 text-green-700 border border-green-200`
       case "error":
-        return `${baseClasses} bg-red-100 text-red-700`
+        return `${baseClasses} bg-red-50 text-red-700 border border-red-200`
       default:
-        return `${baseClasses} bg-blue-100 text-blue-700`
+        return `${baseClasses} bg-orange/10 text-charcoal border border-orange/30`
     }
   }
 
   return (
-    <Card className="bg-white shadow-xl border border-gray-200">
+    <Card className="bg-white shadow-xl border-2 border-transparent hover:border-brick/20 transition-all duration-300">
       <CardContent className="p-8">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Send a Quick Message</h2>
+        <h2 className="text-2xl font-bold text-center text-charcoal mb-6">Send a Quick Message</h2>
 
-        <div className="space-y-4">
+        <div className="space-y-5">
           <div>
-            <Label htmlFor="firstName" className="text-gray-700 text-sm font-semibold">
-              First Name:
+            <Label htmlFor="firstName" className="text-charcoal text-sm font-semibold">
+              First Name
             </Label>
             <Input
               id="firstName"
@@ -125,13 +126,13 @@ export function ContactForm() {
               value={formData.firstName}
               onChange={handleInputChange}
               placeholder="Enter your first name..."
-              className="mt-1"
+              className="mt-1.5 border-2 border-gray-200 focus:border-brick focus:ring-brick/20 transition-colors"
             />
           </div>
 
           <div>
-            <Label htmlFor="lastName" className="text-gray-700 text-sm font-semibold">
-              Last Name:
+            <Label htmlFor="lastName" className="text-charcoal text-sm font-semibold">
+              Last Name
             </Label>
             <Input
               id="lastName"
@@ -139,13 +140,13 @@ export function ContactForm() {
               value={formData.lastName}
               onChange={handleInputChange}
               placeholder="Enter your last name..."
-              className="mt-1"
+              className="mt-1.5 border-2 border-gray-200 focus:border-brick focus:ring-brick/20 transition-colors"
             />
           </div>
 
           <div>
-            <Label htmlFor="message" className="text-gray-700 text-sm font-semibold">
-              Your Message:
+            <Label htmlFor="message" className="text-charcoal text-sm font-semibold">
+              Your Message
             </Label>
             <Textarea
               id="message"
@@ -153,16 +154,23 @@ export function ContactForm() {
               value={formData.message}
               onChange={handleInputChange}
               placeholder="Enter your message here..."
-              className="mt-1 h-32 resize-none"
+              className="mt-1.5 h-32 resize-none border-2 border-gray-200 focus:border-brick focus:ring-brick/20 transition-colors"
             />
           </div>
 
           <Button
             onClick={handleSubmit}
             disabled={isSubmitting}
-            className="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-75 transition duration-200 ease-in-out transform hover:scale-105 active:scale-95 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+            className="w-full bg-brick hover:bg-brick-light text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
           >
-            {isSubmitting ? "Sending..." : "Send Email"}
+            {isSubmitting ? (
+              "Sending..."
+            ) : (
+              <>
+                <Send className="h-4 w-4 mr-2" />
+                Send Message
+              </>
+            )}
           </Button>
 
           {submitMessage && (
