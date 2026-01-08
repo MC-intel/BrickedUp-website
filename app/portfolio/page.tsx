@@ -1,11 +1,11 @@
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent } from "../../components/ui/card"
 import { Phone } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { PageHero } from "@/components/page-hero"
+import { Button } from "../../components/ui/button"
+import { Header } from "../../components/header"
+import { Footer } from "../../components/footer"
+import { PageHero } from "../../components/page-hero"
 
 export default function PortfolioPage() {
   const portfolioItems = [

@@ -1,8 +1,8 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { PageHero } from "@/components/page-hero"
-import { JobRequestForm } from "@/components/job-request-form"
-import { ContactForm } from "@/components/contact-form"
+import { Header } from "../../components/header"
+import { Footer } from "../../components/footer"
+import { PageHero } from "../../components/page-hero"
+import { JobRequestForm } from "../../components/job-request-form"
+import { ContactForm } from "../../components/contact-form"
 
 export default function ContactPage() {
   return (

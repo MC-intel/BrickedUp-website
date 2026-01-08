@@ -1,10 +1,10 @@
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent } from "../../components/ui/card"
 import { Hammer, Phone, ChevronRight } from "lucide-react"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { PageHero } from "@/components/page-hero"
+import { Button } from "../../components/ui/button"
+import { Header } from "../../components/header"
+import { Footer } from "../../components/footer"
+import { PageHero } from "../../components/page-hero"
 
 export default function ServicesPage() {
   const services = [

@@ -1,12 +1,12 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "../components/ui/button"
+import { Card, CardContent } from "../components/ui/card"
 import { Phone, Mail, Hammer, Star, ChevronRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { ContactForm } from "@/components/contact-form"
-import { MobileMenu } from "@/components/mobile-menu"
-import { Footer } from "@/components/footer"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { ContactForm } from "../components/contact-form"
+import { MobileMenu } from "../components/mobile-menu"
+import { Footer } from "../components/footer"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../components/ui/carousel"
 
 export default function HomePage() {
   const portfolioItems = [

@@ -2,8 +2,8 @@
 
 import { Hammer, Phone } from "lucide-react"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { MobileMenu } from "@/components/mobile-menu"
+import { Button } from "./ui/button"
+import { MobileMenu } from "./mobile-menu"
 
 interface HeaderProps {
   currentPage?: "home" | "services" | "portfolio" | "contact"
