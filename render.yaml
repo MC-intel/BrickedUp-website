@@ -2,7 +2,7 @@ services:
   - type: web
     name: brickedup-masonry
     runtime: node
-    buildCommand: npm install --legacy-peer-deps && npm run build
+    buildCommand: chmod +x render-build.sh && ./render-build.sh
     startCommand: npm run start
     envVars:
       - key: NODE_ENV
