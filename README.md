@@ -1,30 +1,48 @@
-# Elite Masonry website
+# BrickedUp Masonry Website
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+Professional masonry services website built with Next.js and deployed on Render.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/mcintels-projects/v0-elite-masonry-website)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/k9em9wkTNHg)
+## Tech Stack
 
-## Overview
+- **Framework**: Next.js 15 (Static Export)
+- **Styling**: Tailwind CSS
+- **Components**: shadcn/ui + Radix UI
+- **Deployment**: Render (Static Site)
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## Development
+
+```bash
+# Install dependencies
+npm install --legacy-peer-deps
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+```
 
 ## Deployment
 
-Your project is live at:
+This project is configured for Render static site deployment via `render.yaml`.
 
-**[https://vercel.com/mcintels-projects/v0-elite-masonry-website](https://vercel.com/mcintels-projects/v0-elite-masonry-website)**
+The build outputs to `./out` directory as static HTML/CSS/JS.
 
-## Build your app
+## Project Structure
 
-Continue building your app on:
+```
+app/
+├── page.tsx           # Homepage
+├── contact/           # Contact page
+├── services/          # Services page
+└── portfolio/         # Portfolio page
 
-**[https://v0.dev/chat/projects/k9em9wkTNHg](https://v0.dev/chat/projects/k9em9wkTNHg)**
-
-## How It Works
-
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+components/
+├── header.tsx         # Shared header
+├── footer.tsx         # Shared footer
+├── page-hero.tsx      # Page hero section
+├── contact-form.tsx   # Contact form
+├── job-request-form.tsx
+├── mobile-menu.tsx
+└── ui/                # shadcn/ui components
+```
